@@ -1,0 +1,38 @@
+[
+    {
+        "name": "JUNIOR SUITE CITY VIEW",
+        "imageurls": [
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/e1/breakfast-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/df/breakfast-buffet.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/de/breakfast-buffet.jpg?w=1400&h=-1&s=1"
+        ],
+        "costperday": 225,
+        "type": "Suite",
+        "maxcount": 4,
+        "currentbookings": [
+
+        ],
+        "description": "very nice hotel room please come and stay",
+        "amenities": "WiFi included, Free Massage",
+        "view": "City View",
+        "accessibility" : "Not Accessible"
+    },
+    {
+        "name": "JUNIOR SUITE GARDEN VIEW",
+        "imageurls": [
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/e1/breakfast-area.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/df/breakfast-buffet.jpg?w=1400&h=-1&s=1",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/62/92/de/breakfast-buffet.jpg?w=1400&h=-1&s=1"
+        ],
+        "costperday": 225,
+        "type": "Suite",
+        "maxcount": 4,
+        "currentbookings": [
+
+        ],
+        "description": "very nice hotel room please come and stay",
+        "amenities": "WiFi included, Free Massage",
+        "view": "Garden View",
+        "accessibility" : "Not Accessible"
+    }
+]

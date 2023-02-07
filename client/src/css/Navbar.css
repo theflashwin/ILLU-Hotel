@@ -1,0 +1,15 @@
+.navbar-bg-1 {
+    background-image: linear-gradient(to left, #FC575E, #F7B42C);
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.right-link {
+    margin-right: auto !important;
+}
