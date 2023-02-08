@@ -40,3 +40,7 @@ h1 {
   padding: 20px !important;
   height: fit-content;
 }
+
+input {
+  margin-top: 10px;
+}

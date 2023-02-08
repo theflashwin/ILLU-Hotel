@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import Room from '../components/Room';
 import Loader from '../components/Loader';
+import Error from '../components/Error'
 
 function Homescreen() {
 
@@ -30,7 +31,7 @@ function Homescreen() {
         <div className='container'>
 
             <div class="row justify-content-center mt-5">
-                {loading ? (<h1><Loader/></h1>) : error ? (<h1>Oopsie</h1>) : (rooms.map(room => {
+                {loading ? (<h1><Loader/></h1>) : error ? (<Error/>) : (rooms.map(room => {
 
                     return <div class="com-md-9 mt-2">
                         <Room room={room}/>
