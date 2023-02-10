@@ -9,7 +9,7 @@ html, body {
     display: flex;
     background-image: linear-gradient(#000428, #00437d);
     
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Oxygen', sans-serif !important;
     
   }
   
@@ -34,8 +34,19 @@ html, body {
 
  h1 {
     text-align: center;
-    color: white;
-    size: 9rem;
-    padding: 2rem 2rem;
+    color: white !important;
+    padding: 1rem 1rem;
     font-size: 3rem;
+}
+
+p {
+  text-align: center;
+    color: white !important;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 0.1rem;
+  color: white !important;
 }

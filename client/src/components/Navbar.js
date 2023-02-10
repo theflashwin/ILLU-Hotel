@@ -2,6 +2,11 @@ import React from 'react'
 import '../css/Navbar.css'
 
 function Navbar() {
+    const user = JSON.parse(localStorage.getItem("currentUser"))
+    function logout() {
+        localStorage.removeItem('currentUser')
+        window.location.href='/login'
+    }
     return (
         <nav class="navbar navbar-expand-lg navbar-bg-1">
             <div class="container-fluid">
@@ -20,23 +25,23 @@ function Navbar() {
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
                         </li>
-                        <li class="nav-item dropdown">
+                    </ul>
+                    <ul class="navbar-nav d-flex">
+                        {user ? (<><li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
+                                {user.data.name}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Bookings</a></li>
+                                <li><a class="dropdown-item" onClick={logout}>Logout</a></li>
                             </ul>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav d-flex"><li class="nav-item right-link">
+                        </li></>) : (<><li class="nav-item right-link">
                             <a class="nav-link" href="/register">Register</a>
                         </li>
                         <li class="nav-item right-link">
                             <a class="nav-link" href="/login">Login</a>
-                        </li></ul>
+                        </li></>)}
+                    </ul>
                 </div>
             </div>
         </nav>

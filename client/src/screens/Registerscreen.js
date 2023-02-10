@@ -1,12 +1,19 @@
 import React, {useState, useEffect} from "react";
+import axios from "axios"
+import Loader from "../components/Loader";
+import Error from "../components/Error";
+import Success from "../components/Success";
 
 function Registerscreen() {
     const[name, setName] = useState('')
     const[email, setEmail] = useState('')
     const[password, setPassword] = useState('')
     const[cpassword, setCPassword] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState()
+    const [success, setSuccess] = useState()
 
-    function register() {
+    async function register() {
         
         if(password == cpassword) {
             const user = {
@@ -15,7 +22,24 @@ function Registerscreen() {
                 password,
                 cpassword,
             }
-            console.log(user)
+            
+            try {
+                setLoading(true)
+                const result = await axios.post(`/api/users/register?name=${user.name}&email=${user.email}&password=${user.password}`, user).data
+                setLoading(false)
+                setSuccess(true)
+
+                setName('')
+                setEmail('')
+                setPassword('')
+                setCPassword('')
+
+            } catch(error) {
+                console.log(error)
+                setLoading(false)
+                setError(true)
+            }
+
         }
         else {
             alert('Error: Passwords do not match')
@@ -25,6 +49,11 @@ function Registerscreen() {
 
     return (
         <div>
+
+            {loading && (<Loader/>)}
+            {error && (<Error/>)}
+            {success && (<Success message="You were registered successfully!" />)}
+
             <div className="row justify-content-center mt-5">
                 <div className="col-md-5">
 
